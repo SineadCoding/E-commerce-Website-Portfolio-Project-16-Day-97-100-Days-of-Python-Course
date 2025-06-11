@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title>JIAP</title>
+</head>
+<body style="background:url('/static/img/background.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; background-color: black">
+
+<header class="p-3 bg-black text-white" style="color:black; padding:10px; display: flex; justify-content: space-between; align-items: center;">
+  <div>
+  <img class="logo" src="/static/img/leaves.png" alt="My Logo" width="80" height="80" style="vertical-align: middle;">
+  <a href="/" style="text-decoration: none;">
+   <button class="button" style="padding: 8px 20px; background-color: #FFFFFF; color: #000000; border: none; border-radius: 5px; cursor: pointer; vertical-align: middle; margin: 0 8px">Home</button>
+  </a>
+  <a href="/about" style="text-decoration: none;">
+   <button class="button" style="padding: 8px 20px; background-color: #FFFFFF; color: #000000; border: none; border-radius: 5px; cursor: pointer; vertical-align: middle; margin: 0 8px">About</button>
+  </a>
+  <a href="/shop" style="text-decoration: none;">
+   <button class="button" style="padding: 8px 20px; background-color: #8BC34A; color: #fff; border: none; border-radius: 5px; cursor: pointer; vertical-align: middle; margin: 0 8px">Shop Plants</button>
+  </a>
+  </div>
+  <div style="display: flex; align-items: center; margin-left: auto;">
+  <a href="/cart" style="text-decoration: none;">
+   <button class="button" style="padding: 8px 20px; background-color: #FFFFFF; color: #000000; border: none; border-radius: 5px; cursor: pointer; margin: 0 8px">Shopping Cart</button>
+  </a>
+  {{ login_logout|safe }}
+<!--  {{ register|safe }}-->
+  </div>
+</header>
+
+
+<div style="max-width: 800px; margin: 40px auto; padding: 20px; background-color: #fff; border: 1px solid #ddd; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+    <table style="width: 100%; border-collapse: collapse;">
+      <tr>
+        <th style="border: 1px solid #ddd; padding: 10px; text-align: left;">Item</th>
+        <th style="border: 1px solid #ddd; padding: 10px; text-align: left;">Price</th>
+        <th style="border: 1px solid #ddd; padding: 10px; text-align: left;">Quantity</th>
+        <th style="border: 1px solid #ddd; padding: 10px; text-align: left;">Total</th>
+        <th style="border: 1px solid #ddd; padding: 10px; text-align: left;">Delete</th>
+      </tr>
+      {% for item, values in cart.items() %}
+      <tr>
+        <td style="border: 1px solid #ddd; padding: 10px;">
+          <img src="{{ values['image'] }}" alt="{{ item }}" style="width: 100px; height: 125px; object-fit: cover; border-radius: 10px;">
+          <br>
+          {{ item }}
+        </td>
+        <td style="border: 1px solid #ddd; padding: 10px;">R{{ values['price'] }}</td>
+          <td style="border: 1px solid #ddd; padding: 10px;">{{ values['quantity'] }}</td>
+
+
+
+        <td style="border: 1px solid #ddd; padding: 10px;">R{{ values['price'] * values['quantity'] }}</td>
+        <td style="border: 1px solid #ddd; padding: 10px;">
+          <form action="/delete_item" method="post">
+           <input type="hidden" name="item_name" value="{{ item }}">
+           <button type="submit" style="background-color: #4CAF50; color: #fff; padding: 5px 10px; border: none; border-radius: 5px; cursor: pointer;">Delete</button>
+          </form>
+        </td>
+      </tr>
+      {% endfor %}
+    </table>
+    <div style="text-align: center; margin-top: 20px;">
+      <a href="/create-checkout-session" style="text-decoration: none;">
+        <button style="background-color: #4CAF50; color: #fff; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">Checkout</button>
+      </a>
+    </div>
+  </div>
+        <div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<footer>
+    <div style="text-align: center; ">
+        <h4 style="color: white">@Sinead Coding 2024</h4>
+    </div>
+</footer>
+
+</div>
+</body>
+</html>
