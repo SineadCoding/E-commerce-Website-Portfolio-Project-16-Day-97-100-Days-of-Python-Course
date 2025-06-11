@@ -1,7 +1,10 @@
+
+https://github.com/user-attachments/assets/7ed31b38-46e8-4685-97f5-d3abf66ac7ac
 # E-commerce Website Portfolio Project 16 Day 97 100 Days of Python Course
 A simple and functional eCommerce website built with Flask and integrated with Stripe for payment processing. This app supports user registration, login, shopping cart functionality, checkout with delivery info, and session-based cart tracking.
 
 https://github.com/user-attachments/assets/8826b4ef-6e94-40ad-a21b-1187104c7cab
+
 
  Features:
 
@@ -19,7 +22,7 @@ https://github.com/user-attachments/assets/8826b4ef-6e94-40ad-a21b-1187104c7cab
 
 
  Delivery information capture before payment:
- https://github.com/user-attachments/assets/5cb36ec5-a57c-45fa-99fb-895a4583bcaf
+ Uploading Untitled video - Made with Clipchamp (1).mp4…
 
 
  Templated frontend with Flask's Jinja engine
@@ -30,6 +33,7 @@ https://github.com/user-attachments/assets/8826b4ef-6e94-40ad-a21b-1187104c7cab
 
 
  SQLite database for storing user credentials
+
 
 
  Tech Stack:
@@ -49,4 +53,3 @@ Install dependencies
 Create your .env file
 Run the app
 Open your browser and navigate to http://127.0.0.1:5000/
-
