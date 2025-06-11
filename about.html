@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JIAP</title>
+</head>
+<body style="background:url('/static/img/background.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; background-color: black">
+
+<header class="p-3 bg-black text-white" style="color:black; padding:10px; display: flex; justify-content: space-between; align-items: center;">
+  <div>
+  <img class="logo" src="/static/img/leaves.png" alt="My Logo" width="80" height="80" style="vertical-align: middle;">
+  <a href="/" style="text-decoration: none;">
+   <button class="button" style="padding: 8px 20px; background-color: #FFFFFF; color: #000000; border: none; border-radius: 5px; cursor: pointer; vertical-align: middle; margin: 0 8px">Home</button>
+  </a>
+  <a href="/about" style="text-decoration: none;">
+   <button class="button" style="padding: 8px 20px; background-color: #FFFFFF; color: #000000; border: none; border-radius: 5px; cursor: pointer; vertical-align: middle; margin: 0 8px">About</button>
+  </a>
+  <a href="/shop" style="text-decoration: none;">
+   <button class="button" style="padding: 8px 20px; background-color: #8BC34A; color: #fff; border: none; border-radius: 5px; cursor: pointer; vertical-align: middle; margin: 0 8px">Shop Plants</button>
+  </a>
+  </div>
+  <div style="display: flex; align-items: center; margin-left: auto;">
+  <a href="/cart" style="text-decoration: none;">
+   <button class="button" style="padding: 8px 20px; background-color: #FFFFFF; color: #000000; border: none; border-radius: 5px; cursor: pointer; margin: 0 8px">Shopping Cart</button>
+  </a>
+  {{ login_logout|safe }}
+<!--  {{ register|safe }}-->
+  </div>
+</header>
+
+
+<div class="jumbotron text-center">
+    <h2 style="text-align:center; font-size:350%; color:white; font-weight: bold; font-family: Ariel, sans-serif;">About Us</h2>
+    <h3 style="text-align:center; font-size:140%; color:white; font-family: Ariel, ariel-italic;">At Jungle in a Pot, we are passionate about bringing the beauty of nature indoors, one plant at a time. Our journey started with a simple belief: plants are more than just decor—they are life-enhancing elements that can transform any space. Whether it's the air-purifying properties of a fern, the calming presence of a succulent, or the vibrant pop of green from a tropical plant, we understand how important plants are for our well-being. From novice plant owners to seasoned green thumbs, we’re here to help you grow a thriving indoor jungle.</h3>
+
+    <h3 style="text-align:center; font-size:140%; color:white; font-family: Ariel, ariel-italic;">Our love for nature runs deep, and we believe that every home deserves a touch of the outdoors. We carefully curate a diverse collection of houseplants, each selected for its beauty, ease of care, and ability to improve the indoor environment. We recognize that bringing plants into your home isn’t just about aesthetics; it’s about creating a healthy, harmonious space that nurtures both body and mind. That’s why we go the extra mile to ensure our plants are not only high-quality but also easy to care for, offering guidance and tips to help you create your own indoor oasis.</h3>
+
+    <h3 style="text-align:center; font-size:140%; color:white; font-family: Ariel, ariel-italic;">At Jungle in a Pot, we want to make your plant journey as enjoyable as possible. We are here to foster a community of plant lovers who share our commitment to celebrating the natural world and enhancing our living spaces with green companions. Whether you're looking to add a few statement pieces or fill your home with a variety of plants, we’ve got you covered. Join us in embracing the soothing power of nature, and let’s create a jungle in your pot!</h3>
+     <div style="text-align: center; ">
+         <a href="/shop" style="text-decoration: none;">
+      <button style="background-color: #8BC34A; color: #fff; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">Start Shopping</button>
+         </a>
+     </div>
+     </div>
+        <div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<footer>
+    <div style="text-align: center; ">
+        <h4 style="color: white">@Sinead Coding 2024</h4>
+    </div>
+</footer>
+
+</div>
+</body>
+</html>
