@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title>JIAP</title>
+</head>
+<body style="background:url('/static/img/background.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; background-color: black">
+
+<header class="p-3 bg-black text-white" style="color:black; padding:10px; display: flex; justify-content: space-between; align-items: center;">
+  <div>
+  <img class="logo" src="/static/img/leaves.png" alt="My Logo" width="80" height="80" style="vertical-align: middle;">
+  <a href="/" style="text-decoration: none;">
+   <button class="button" style="padding: 8px 20px; background-color: #FFFFFF; color: #000000; border: none; border-radius: 5px; cursor: pointer; vertical-align: middle; margin: 0 8px">Home</button>
+  </a>
+  <a href="/about" style="text-decoration: none;">
+   <button class="button" style="padding: 8px 20px; background-color: #FFFFFF; color: #000000; border: none; border-radius: 5px; cursor: pointer; vertical-align: middle; margin: 0 8px">About</button>
+  </a>
+  <a href="/shop" style="text-decoration: none;">
+   <button class="button" style="padding: 8px 20px; background-color: #8BC34A; color: #fff; border: none; border-radius: 5px; cursor: pointer; vertical-align: middle; margin: 0 8px">Shop Plants</button>
+  </a>
+  </div>
+  <div style="display: flex; align-items: center; margin-left: auto;">
+  <a href="/cart" style="text-decoration: none;">
+   <button class="button" style="padding: 8px 20px; background-color: #FFFFFF; color: #000000; border: none; border-radius: 5px; cursor: pointer; margin: 0 8px">Shopping Cart</button>
+  </a>
+  {{ login_logout|safe }}
+
+  </div>
+</header>
+
+
+<div class="jumbotron text-center">
+   <h2 style="text-align:center; font-size:300%; color:white; font-weight: bold; font-family: Ariel, sans-serif;">Shop Our Plants</h2>
+    <div style="text-align: center; ">
+    </div>
+</div>
+
+<div style="display: flex; flex-wrap: wrap; justify-content: center;">
+  
+  <div style="background-color: #fff; border: 1px solid #ddd; padding: 20px; border-radius: 10px; margin: 20px; width: 300px;">
+   <img src="/static/img/pothos.jpg" alt="Pothos img" style="width: 100%; height: 300px; object-fit: cover; border-radius: 10px 10px 0 0;">
+   <h2 style="font-size: 18px; font-weight: bold; margin-bottom: 10px;">Pothos</h2>
+   <p style="font-size: 14px; color: #666; margin-bottom: 20px;">The pothos plant is a low-maintenance, hardy houseplant known for its air-purifying qualities and attractive, trailing vines, making it an ideal choice for both beginners and experienced plant enthusiasts.</p>
+   <p style="font-size: 18px; font-weight: bold; color: #333; margin-bottom: 10px;">R129.99</p>
+  <form action="/add_to_cart" method="post">
+   <input type="hidden" name="item_name" value="Pothos">
+   <input type="hidden" name="item_price" value="129.99">
+   <input type="hidden" name="image" value="/static/img/pothos.jpg">
+   <input type="number" name="quantity" value="1" style="width: 50px;">
+   <button type="submit" style="background-color: #8BC34A; color: #fff; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">Add to Cart</button>
+  </form>
+  </div>
+  
+  <div style="background-color: #fff; border: 1px solid #ddd; padding: 20px; border-radius: 10px; margin: 20px; width: 300px;">
+   <img src="/static/img/Snake.jpg" alt="Snake Plant img" style="width: 100%; height: 300px; object-fit: cover; border-radius: 10px 10px 0 0;">
+   <h2 style="font-size: 18px; font-weight: bold; margin-bottom: 10px;">Snake Plant</h2>
+   <p style="font-size: 14px; color: #666; margin-bottom: 20px;">The snake plant is a resilient, low-maintenance houseplant that thrives in various lighting conditions and is renowned for its air-purifying properties, making it perfect for both beginners and experienced plant lovers.</p>
+   <p style="font-size: 18px; font-weight: bold; color: #333; margin-bottom: 10px;">R89.99</p>
+   <form action="/add_to_cart" method="post">
+   <input type="hidden" name="item_name" value="Snake Plant">
+   <input type="hidden" name="item_price" value="89.99">
+   <input type="hidden" name="image" value="/static/img/Snake.jpg">
+   <input type="number" name="quantity" value="1" style="width: 50px;">
+   <button type="submit" style="background-color: #8BC34A; color: #fff; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">Add to Cart</button>
+  </form>
+  </div>
+
+  <div style="background-color: #fff; border: 1px solid #ddd; padding: 20px; border-radius: 10px; margin: 20px; width: 300px;">
+   <img src="/static/img/fiddle.jpg" alt="Fiddle Leaf Fig img" style="width: 100%; height: 300px; object-fit: cover; border-radius: 10px 10px 0 0;">
+   <h2 style="font-size: 18px; font-weight: bold; margin-bottom: 10px;">Fiddle Leaf Fig</h2>
+   <p style="font-size: 14px; color: #666; margin-bottom: 20px;">The Fiddle Leaf Fig is a striking, large-leaved houseplant that adds a bold touch to any space, while its moderate care requirements make it a favorite among plant enthusiasts looking for a dramatic yet manageable plant.</p>
+   <p style="font-size: 18px; font-weight: bold; color: #333; margin-bottom: 10px;">R249.99</p>
+   <form action="/add_to_cart" method="post">
+   <input type="hidden" name="item_name" value="Fiddle Leaf Fig">
+   <input type="hidden" name="item_price" value="249.99">
+   <input type="hidden" name="image" value="/static/img/fiddle.jpg">
+   <input type="number" name="quantity" value="1" style="width: 50px;">
+   <button type="submit" style="background-color: #8BC34A; color: #fff; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">Add to Cart</button>
+  </form>
+  </div>
+
+  <div style="background-color: #fff; border: 1px solid #ddd; padding: 20px; border-radius: 10px; margin: 20px; width: 300px;">
+   <img src="/static/img/monster.jpg" alt="Monstera image" style="width: 100%; height: 300px; object-fit: cover; border-radius: 10px 10px 0 0;">
+   <h2 style="font-size: 18px; font-weight: bold; margin-bottom: 10px;">Monstera</h2>
+   <p style="font-size: 14px; color: #666; margin-bottom: 20px;">The Monstera is a popular, easy-to-care-for houseplant known for its unique, split leaves that add a tropical flair to any space, making it a favorite among plant lovers seeking both beauty and low-maintenance care.</p>
+   <p style="font-size: 18px; font-weight: bold; color: #333; margin-bottom: 10px;">R179.99</p>
+   <form action="/add_to_cart" method="post">
+   <input type="hidden" name="item_name" value="Monstera">
+   <input type="hidden" name="item_price" value="179.99">
+   <input type="hidden" name="image" value="/static/img/monster.jpg">
+   <input type="number" name="quantity" value="1" style="width: 50px;">
+   <button type="submit" style="background-color: #8BC34A; color: #fff; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">Add to Cart</button>
+  </form>
+  </div>
+
+  <div style="background-color: #fff; border: 1px solid #ddd; padding: 20px; border-radius: 10px; margin: 20px; width: 300px;">
+   <img src="/static/img/palm.jpg" alt="The Cascade Palm image" style="width: 100%; height: 300px; object-fit: cover; border-radius: 10px 10px 0 0;">
+   <h2 style="font-size: 18px; font-weight: bold; margin-bottom: 10px;">Cascade palm</h2>
+   <p style="font-size: 14px; color: #666; margin-bottom: 20px;">The Cascade Palm is a graceful, low-maintenance houseplant with feathery, arching fronds that bring a touch of elegance to any room, making it a great choice for those looking to add a tropical vibe with minimal effort.</p>
+   <p style="font-size: 18px; font-weight: bold; color: #333; margin-bottom: 10px;">R269.99</p>
+   <form action="/add_to_cart" method="post">
+   <input type="hidden" name="item_name" value="Cascade Palm">
+   <input type="hidden" name="item_price" value="269.99">
+   <input type="hidden" name="image" value="/static/img/palm.jpg">
+   <input type="number" name="quantity" value="1" style="width: 50px;">
+   <button type="submit" style="background-color: #8BC34A; color: #fff; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">Add to Cart</button>
+  </form>
+  </div>
+
+  <div style="background-color: #fff; border: 1px solid #ddd; padding: 20px; border-radius: 10px; margin: 20px; width: 300px;">
+   <img src="/static/img/strelitzia.jpg" alt="Strelitzia nicolai image" style="width: 100%; height: 300px; object-fit: cover; border-radius: 10px 10px 0 0;">
+   <h2 style="font-size: 18px; font-weight: bold; margin-bottom: 10px;">Strelitzia nicolai</h2>
+   <p style="font-size: 14px; color: #666; margin-bottom: 20px;">
+The Strelitzia Nicolai, also known as the Giant Bird of Paradise, is a striking houseplant with large, banana-like leaves that bring a bold, tropical aesthetic to any space, while its relatively simple care requirements make it a favorite among plant enthusiasts.</p>
+   <p style="font-size: 18px; font-weight: bold; color: #333; margin-bottom: 10px;">R239.99</p>
+  <form action="/add_to_cart" method="post">
+   <input type="hidden" name="item_name" value="Strelitzia nicolai">
+   <input type="hidden" name="item_price" value="239.99">
+   <input type="hidden" name="image" value="/static/img/strelitzia.jpg">
+   <input type="number" name="quantity" value="1" style="width: 50px;">
+   <button type="submit" style="background-color: #8BC34A; color: #fff; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">Add to Cart</button>
+  </form>
+  </div>
+</div>
+
+<div style="text-align: center; ">
+  <a href="/cart" style="text-decoration: none;">
+   <button style="background-color: #8BC34A; color: #fff; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">Shopping Cart</button>
+  </a>
+</div>
+        <div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<footer>
+    <div style="text-align: center; ">
+        <h4 style="color: white">@Sinead Coding 2024</h4>
+    </div>
+</footer>
+
+</div>
+</body>
+</html>
