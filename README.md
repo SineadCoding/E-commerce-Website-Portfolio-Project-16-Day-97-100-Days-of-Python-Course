@@ -10,7 +10,9 @@ https://github.com/user-attachments/assets/8826b4ef-6e94-40ad-a21b-1187104c7cab
 
 
  User authentication (register/login/logout):
- https://github.com/user-attachments/assets/a8ee8ca7-b7fc-466e-9d57-eb3e434f20b0
+ ![Screenshot 2025-06-11 130746](https://github.com/user-attachments/assets/0240eb70-906e-452c-bf6f-1570bfa67f25)
+ ![Screenshot 2025-06-11 130759](https://github.com/user-attachments/assets/72684983-bc9a-4042-83d3-2e5d720e1c57)
+
 
  Checkout process integrated with Stripe:
  ![Screenshot 2025-06-11 121757](https://github.com/user-attachments/assets/99d04cd8-6755-4b45-bcf7-7cf23ca8b76d)
